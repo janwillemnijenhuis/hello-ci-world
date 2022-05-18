@@ -11,10 +11,5 @@ jobs:
         with:
           distribution: 'zulu' # See 'Supported distributions' for available options
           java-version: '17'
-
-      - name: build with maven
-        run: mvn build
-
-      - name: run main
         run: java -cp java Main
 
