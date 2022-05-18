@@ -1,0 +1,14 @@
+name: new workflow
+
+on: [push]
+
+jobs:
+  hello-nedap:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello Nedap
+        run: echo "Hello Nedap"
+
+      - name: Something
+        run: echo
+
