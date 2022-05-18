@@ -6,10 +6,15 @@ jobs:
   hello-nedap:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: setup java
       - uses: actions/setup-java@v3
         with:
-          distribution: 'temurin' # See 'Supported distributions' for available options
+          distribution: 'zulu' # See 'Supported distributions' for available options
           java-version: '17'
-      - run: java -cp java Main
+
+      - name: build with maven
+        run: mvn build
+
+      - name: run main
+        run: java -cp java Main
 
